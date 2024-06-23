@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* from code pen
+  #app-background {
+    height: 100%;
+    left: 0px;
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+    
+    #app-background-image {
+      background-image: url(https://i.imgur.com/DRTx0qg.jpeg);
+      height: 100%;
+      transition: filter 250ms, transform 250ms;
+      width: 100%;
+    }
+  }*/
+.bg-image-wrapper {
+  height: 100%;
+  left: 0px;
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+}
+.bg-image {
+  background-image: url("../public/assets/images/background.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  transition: filter 250ms, transform 250ms;
+  width: 100%;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+}
