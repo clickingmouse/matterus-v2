@@ -19,7 +19,7 @@ import classNames from "classnames";
 //     </section>
 //   );
 // };
-import React from "react";
+import React, { useEffect, useRef } from "react";
 //import ReactDOM from "react-dom/client";
 import * as ReactDOM from "react-dom/client";
 
@@ -370,68 +370,96 @@ const QuickNav = () => {
 };
 
 //---------------------------------------//
-const Weather = () => {
-  const getProducts = () => {
-    return [
-      {
-        id: 1,
-        name: "Product 1",
-        price: "$10.99",
-        description: "This is the first product",
-        image:
-          "https://images.unsplash.com/photo-1604957332308-7f480636c7db?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
-      },
-      {
-        id: 2,
-        name: "Product 2",
-        price: "$19.99",
-        description: "This is the second product",
-        image:
-          "https://images.unsplash.com/photo-1605425632114-941b427efe93?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
-      },
-      {
-        id: 3,
-        name: "Product 3",
-        price: "$24.99",
-        description: "This is the third product",
-        image:
-          "https://images.unsplash.com/photo-1604957332308-7f480636c7db?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
-      },
-      {
-        id: 4,
-        name: "Product 4",
-        price: "$14.99",
-        description: "This is the fourth product",
-        image:
-          "https://images.unsplash.com/photo-1605425632114-941b427efe93?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
-      },
-    ].map((product) => {
-      return (
-        <div key={product.id} className="slide | js-slide" style={{ "--m": 1 }}>
-          <div className="slide__inner">
-            <div className="slide__img | js-slide-img">
-              <img src={product.image} alt={product.name} />
-            </div>
-          </div>
-        </div>
-      );
-    });
-  };
+// const Weather = () => {
+//   const containerRef = useRef(null);
+//   useEffect(() => {
+//     const sectionAnimateObserver = new IntersectionObserver(
+//       (entries) => {
+//         entries.forEach((entry) => {
+//           if (entry.isIntersecting) {
+//             entry.target.classList.add("active");
+//           } else {
+//             entry.target.classList.remove("active");
+//           }
+//         });
+//       },
+//       { threshold: 0.2 }
+//     );
+//     if (containerRef.current)
+//       sectionAnimateObserver.observe(containerRef.current);
+//     return () => {
+//       if (containerRef.current)
+//         sectionAnimateObserver.unobserve(containerRef.current);
+//     };
+//     /////////////////////////////////////////////
+//     //const sectionAnimateElements = document.querySelectorAll(".section-animate");
+//     //sectionAnimateElements.forEach((element) => {
+//     //sectionAnimateObserver.observe(element);
+//     //});
+//   }, [containerRef, { threshold: 0.2 }]);
 
-  return (
-    <div id="weather-section" className="section-animate">
-      <MenuSection
-        icon="fas fa-shopping-cart"
-        id="product-section"
-        scrollable
-        title="Featured Products"
-      >
-        {getProducts()}
-      </MenuSection>
-    </div>
-  );
-};
+//   //
+//   const getProducts = () => {
+//     return [
+//       {
+//         id: 1,
+//         name: "Product 1",
+//         price: "$10.99",
+//         description: "This is the first product",
+//         image:
+//           "https://images.unsplash.com/photo-1604957332308-7f480636c7db?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+//       },
+//       {
+//         id: 2,
+//         name: "Product 2",
+//         price: "$19.99",
+//         description: "This is the second product",
+//         image:
+//           "https://images.unsplash.com/photo-1605425632114-941b427efe93?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+//       },
+//       {
+//         id: 3,
+//         name: "Product 3",
+//         price: "$24.99",
+//         description: "This is the third product",
+//         image:
+//           "https://images.unsplash.com/photo-1604957332308-7f480636c7db?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+//       },
+//       {
+//         id: 4,
+//         name: "Product 4",
+//         price: "$14.99",
+//         description: "This is the fourth product",
+//         image:
+//           "https://images.unsplash.com/photo-1605425632114-941b427efe93?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+//       },
+//     ].map((product) => {
+//       return (
+//         <div key={product.id} className="slide | js-slide" style={{ "--m": 1 }}>
+//           <div className="slide__inner">
+//             <div className="slide__img | js-slide-img">
+//               <img src={product.image} alt={product.name} />
+//             </div>
+//           </div>
+//         </div>
+//       );
+//     });
+//   };
 
+//   return (
+//     <div id="weather-section" className="section-animate" ref={containerRef}>
+//       <MenuSection
+//         icon="fas fa-shopping-cart"
+//         id="product-section"
+//         scrollable
+//         title="Featured Products"
+//       >
+//         {getProducts()}
+//       </MenuSection>
+//     </div>
+//   );
+// };
+//////////////////////////////////
 const sectionAnimateObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -444,10 +472,14 @@ const sectionAnimateObserver = new IntersectionObserver(
   },
   { threshold: 0.2 }
 );
+
+/////////////////////////////////////////////
 const sectionAnimateElements = document.querySelectorAll(".section-animate");
 sectionAnimateElements.forEach((element) => {
   sectionAnimateObserver.observe(element);
 });
+
+//
 const Tools = () => {
   const getTools = () => {
     return [
@@ -745,7 +777,7 @@ const Menu = () => {
           React.createElement("i", { className: "fa-brands fa-youtube" }),
           React.createElement("span", null, "Discord頻道")
         ),
-        React.createElement(Weather, null),
+        //React.createElement(Weather, null),
         React.createElement(Restaurants, null),
         React.createElement(Tools, null),
         React.createElement(Movies, null)
@@ -783,6 +815,9 @@ const Home = () => {
   const getStatusClass = () => {
     return userStatus.replace(/\s+/g, "-").toLowerCase();
   };
+
+  //
+
   return React.createElement(
     AppContext.Provider,
     { value: { userStatus, setUserStatusTo } },
