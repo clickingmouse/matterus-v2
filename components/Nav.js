@@ -6,10 +6,10 @@ import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 
 const Nav = () => {
   const isUsserLoggedIn = true;
-  const [providers, getProviders] = useState(null);
+  const [providers, setProviders] = useState(null);
 
   useEffect(() => {
-    const setProviders = async () => {
+    const setUpProviders = async () => {
       const response = await getProviders();
 
       setProviders(response);
@@ -25,29 +25,31 @@ const Nav = () => {
 
       {/*desktop devices*/}
       <div className="sm:flex hidden">
-        {isUsserLoggedIn ? (
-          <div className="flex gap-3 md:gap=5">
-            <Link href="/" className="black-btn">
-              HOME
-            </Link>
-            <button type="button" onClick={signOut} className="outline_btn">
-              Sign Out
-            </button>
-          </div>
-        ) : (
-          <>
-            {providers &&
-              Object.values(providers).map((provider) => (
-                <button
-                  type="button"
-                  key={provider.name}
-                  onClick={() => signIn(provider.id)}
-                >
-                  Sign In
-                </button>
-              ))}
-          </>
-        )}
+        {
+          /* session?.user*/ isUsserLoggedIn ? (
+            <div className="flex gap-3 md:gap=5">
+              <Link href="/" className="black-btn">
+                HOME
+              </Link>
+              <button type="button" onClick={signOut} className="outline_btn">
+                Sign Out
+              </button>
+            </div>
+          ) : (
+            <>
+              {providers &&
+                Object.values(providers).map((provider) => (
+                  <button
+                    type="button"
+                    key={provider.name}
+                    onClick={() => signIn(provider.id)}
+                  >
+                    Sign In
+                  </button>
+                ))}
+            </>
+          )
+        }
       </div>
     </nav>
   );

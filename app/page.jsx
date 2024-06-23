@@ -1,6 +1,8 @@
+import Cases from "@components/Cases";
+import Solutions from "@components/Solutions";
 const Home = () => {
   return (
-    <section className="w-full flex-center">
+    <section className="w-full flex-center ">
       <h1 className=" head_text text-center">discore & share</h1>
       <br className="max-md:hidden" />
       <span className="orange_gradient">IOT</span>
@@ -9,6 +11,7 @@ const Home = () => {
         repudiandae, fugit nemo velit quaerat sit odio nam voluptas in maxime
         mollitia laboriosam totam laudantium, natus ut vitae officiis. Facilis?
       </p>
+      <Solutions />
     </section>
   );
 };

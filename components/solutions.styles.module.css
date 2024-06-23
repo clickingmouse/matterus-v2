@@ -1,0 +1,88 @@
+.solutions_title {
+  align-items: center;
+  display: flex;
+  gap: 6px;
+}
+
+.solutions_title_text {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.25em;
+}
+
+.solution-card {
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  object-fit: cover;
+  height: 14vw;
+  max-height: 160px;
+  min-height: 140px;
+  max-height: 240px;
+  position: relative;
+  transition: transform 250ms;
+  width: 25%;
+}
+
+.solution-card:hover {
+  transform: translateY(-5px);
+}
+
+.solution-card-content {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+}
+#app
+  #restaurants-section
+  .menu-section-content
+  .restaurant-card:hover
+  .restaurant-card-content
+  .restaurant-card-content-items {
+  margin-bottom: 30px;
+}
+#app
+  #restaurants-section
+  .menu-section-content
+  .restaurant-card
+  .restaurant-card-content {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+}
+#app
+  #restaurants-section
+  .menu-section-content
+  .restaurant-card
+  .restaurant-card-content
+  .restaurant-card-content-items {
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  position: absolute;
+  right: 0px;
+  text-align: right;
+  transition: margin 250ms;
+}
+#app
+  #restaurants-section
+  .menu-section-content
+  .restaurant-card
+  .restaurant-card-content
+  .restaurant-card-content-items
+  .restaurant-card-title {
+  color: whitesmoke;
+  font-size: 1.5em;
+}
+#app
+  #restaurants-section
+  .menu-section-content
+  .restaurant-card
+  .restaurant-card-content
+  .restaurant-card-content-items
+  .restaurant-card-desc {
+  color: #42a5f5;
+  font-size: 0.9em;
+}

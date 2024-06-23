@@ -13,20 +13,36 @@ const RootLayout = ({ children }) => {
   return (
     <html lang="en">
       <body lang="en">
-        <Provider>
-          <div className="main">
-            <div className="gradient" />
-          </div>
-
-          <main className="app">
-            <div className="bg-image-wrapper">
-              <div className="bg-image">
-                <Nav />
-                {children}
+        <div className="mainWrapper">
+          <div className="relative">
+            <Provider>
+              <div className="main ">
+                <div className="gradient" />
               </div>
-            </div>
-          </main>
-        </Provider>
+
+              <main className="app">
+                <div className="bgImageWrapper">
+                  <div className="bgImage">
+                    <div
+                      style={{
+                        height: "1000px",
+                        //backgroundColor: "red",
+                        fontSize: "36px",
+                      }}
+                    >
+                      Scroll Up and Down this page to see the parallax scrolling
+                      effect. This div is just here to enable scrolling. Tip:
+                      Try to remove the background-attachment property to remove
+                      the scrolling effect.
+                      <Nav />
+                      {children}
+                    </div>
+                  </div>
+                </div>
+              </main>
+            </Provider>
+          </div>
+        </div>
       </body>
     </html>
   );
