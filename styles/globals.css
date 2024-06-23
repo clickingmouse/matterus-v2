@@ -37,3 +37,7 @@
   transition: filter 250ms, transform 250ms;
   width: 100%;
 }
+
+.flex-between {
+  @apply flex justify-between items-center;
+}

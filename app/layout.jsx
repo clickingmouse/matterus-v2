@@ -1,4 +1,6 @@
 import "@styles/globals.css";
+import Nav from "@components/Nav";
+import Provider from "@components/Provider";
 
 import Image from "next/image";
 
@@ -17,7 +19,10 @@ const RootLayout = ({ children }) => {
 
         <main className="app">
           <div className="bg-image-wrapper">
-            <div className="bg-image">{children}</div>
+            <div className="bg-image">
+              <Nav />
+              {children}
+            </div>
           </div>
         </main>
       </body>
