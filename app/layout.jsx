@@ -21,15 +21,9 @@ const RootLayout = ({ children }) => {
               </div>
 
               <main className="app">
-                <div className="bgImageWrapper">
-                  <div className="bgImage">
-                    <div
-                      style={{
-                        height: "1000px",
-                        //backgroundColor: "red",
-                        fontSize: "36px",
-                      }}
-                    >
+                <div className="">
+                  <div className="">
+                    <div style={{}}>
                       Scroll Up and Down this page to see the parallax scrolling
                       effect. This div is just here to enable scrolling. Tip:
                       Try to remove the background-attachment property to remove
