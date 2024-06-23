@@ -1,5 +1,7 @@
 import "@styles/globals.css";
 
+import Image from "next/image";
+
 export const metadata = {
   title: "MatterUs",
   description: "vbhjnkm",
@@ -12,8 +14,13 @@ const RootLayout = ({ children }) => {
         <div className="main">
           <div className="gradient" />
         </div>
+
+        <main className="app">
+          <div className="bg-image-wrapper">
+            <div className="bg-image">{children}</div>
+          </div>
+        </main>
       </body>
-      <main className="app">{children}</main>
     </html>
   );
 };
