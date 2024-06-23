@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* from code pen
+  #app-background {
+    height: 100%;
+    left: 0px;
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+    
+    #app-background-image {
+      background-image: url(https://i.imgur.com/DRTx0qg.jpeg);
+      height: 100%;
+      transition: filter 250ms, transform 250ms;
+      width: 100%;
+    }
+  }*/
