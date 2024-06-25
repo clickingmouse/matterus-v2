@@ -64,7 +64,9 @@ const Carousell = () => {
             src="https://i.imgur.com/LBivabb.jpeg"
           />
           <div className={styles.slideOverlay}>
-            <h2>智能共享方案</h2>
+            <h2 style={{ color: "#e8e5e5" }} className={styles.slideOverlayH2}>
+              智能共享方案
+            </h2>
             <button className={styles.slideOverlayButton}>
               方案詳情及收費{" "}
               <i className="fa-solid fa-person-breastfeeding"></i>
@@ -79,7 +81,9 @@ const Carousell = () => {
             src="https://i.imgur.com/IFsyKpe.jpeg"
           />
           <div className={styles.slideOverlay}>
-            <h2>智能掌控方案</h2>
+            <h2 style={{ color: "#e8e5e5" }} className={styles.slideOverlayH2}>
+              智能掌控方案
+            </h2>
             <button className={styles.slideOverlayButton}>
               方案詳情及收費 <i className="fa-solid fa-tower-cell"></i>
             </button>
@@ -93,7 +97,9 @@ const Carousell = () => {
             src="https://i.imgur.com/2vTBlqv.jpeg"
           />
           <div className={styles.slideOverlay}>
-            <h2>有聲有色方案</h2>
+            <h2 style={{ color: "#e8e5e5" }} className={styles.slideOverlayH2}>
+              有聲有色方案
+            </h2>
             <button className={styles.slideOverlayButton}>
               方案詳情及收費 <i className="fa-brands fa-steam"></i>
             </button>
@@ -107,7 +113,9 @@ const Carousell = () => {
             src="https://i.imgur.com/BUIvsiM.jpeg"
           />
           <div className={styles.slideOverlay}>
-            <h2>慳錢慳電方案</h2>
+            <h2 style={{ color: "#e8e5e5" }} className={styles.slideOverlayH2}>
+              慳錢慳電方案
+            </h2>
             <button className={styles.slideOverlayButton}>
               方案詳情及收費 <i className="fa-solid fa-seedling"></i>
             </button>
@@ -121,7 +129,9 @@ const Carousell = () => {
             src="https://i.imgur.com/aXtqJTg.png"
           />
           <div className={styles.slideOverlay}>
-            <h2>一條龍服務🐉</h2>
+            <h2 style={{ color: "#e8e5e5" }} className={styles.slideOverlayH2}>
+              一條龍服務🐉
+            </h2>
             <button className={styles.slideOverlayButton}>
               預約免費諮詢 <i className="fa-solid fa-fire"></i>
             </button>

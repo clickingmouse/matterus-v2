@@ -60,6 +60,7 @@
 }
 
 .slideOverlayH2 {
+  color: #e5e5e5;
   font-size: clamp(1.2rem, 3vw, 2.2rem);
   font-weight: 700;
 }

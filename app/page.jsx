@@ -3,7 +3,7 @@
 import Cases from "@components/Cases";
 import Solutions from "@components/Solutions";
 import classNames from "classnames";
-import Slideshow from "@components/Slider";
+//import Slideshow from "@components/Slider";
 import Carousell from "@components/Carousell";
 // const Home = () => {
 //   return (
