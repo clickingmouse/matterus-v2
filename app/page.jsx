@@ -668,11 +668,8 @@ const Menu = () => {
           React.createElement("span", null, "Discord頻道")
         ),
         //React.createElement(Weather, null),
-        // add slider here?
-        /////////////////////////////////
-        //////////////////////////////
+
         React.createElement(Carousell, null),
-        //React.createElement(Slideshow, null),
         React.createElement(Restaurants, null),
         React.createElement(Tools, null),
         React.createElement(Movies, null)

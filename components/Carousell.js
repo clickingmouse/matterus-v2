@@ -14,8 +14,30 @@ import "swiper/css/pagination";
 import styles from "./slider.styles.module.css";
 
 // Import Swiper styles
-import "swiper/css";
-
+// import "swiper/css";
+// var swiper = new Swiper(".swiper", {
+//   effect: "coverflow",
+//   grabCursor: true,
+//   centeredSlides: true,
+//   loop: true,
+//   speed: 600,
+//   slidesPerView: "auto",
+//   coverflowEffect: {
+//     rotate: 10,
+//     stretch: 120,
+//     depth: 200,
+//     modifier: 1,
+//     slideShadows: false,
+//   },
+//   on: {
+//     click(event) {
+//       swiper.slideTo(this.clickedIndex);
+//     },
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//   },
+// });
 const Carousell = () => {
   return (
     <Swiper
@@ -43,7 +65,7 @@ const Carousell = () => {
           />
           <div className={styles.slideOverlay}>
             <h2>智能共享方案</h2>
-            <button>
+            <button className={styles.slideOverlayButton}>
               方案詳情及收費{" "}
               <i className="fa-solid fa-person-breastfeeding"></i>
             </button>
@@ -58,7 +80,7 @@ const Carousell = () => {
           />
           <div className={styles.slideOverlay}>
             <h2>智能掌控方案</h2>
-            <button>
+            <button className={styles.slideOverlayButton}>
               方案詳情及收費 <i className="fa-solid fa-tower-cell"></i>
             </button>
           </div>
@@ -72,7 +94,7 @@ const Carousell = () => {
           />
           <div className={styles.slideOverlay}>
             <h2>有聲有色方案</h2>
-            <button>
+            <button className={styles.slideOverlayButton}>
               方案詳情及收費 <i className="fa-brands fa-steam"></i>
             </button>
           </div>
@@ -86,7 +108,7 @@ const Carousell = () => {
           />
           <div className={styles.slideOverlay}>
             <h2>慳錢慳電方案</h2>
-            <button>
+            <button className={styles.slideOverlayButton}>
               方案詳情及收費 <i className="fa-solid fa-seedling"></i>
             </button>
           </div>
@@ -100,7 +122,7 @@ const Carousell = () => {
           />
           <div className={styles.slideOverlay}>
             <h2>一條龍服務🐉</h2>
-            <button>
+            <button className={styles.slideOverlayButton}>
               預約免費諮詢 <i className="fa-solid fa-fire"></i>
             </button>
           </div>
